@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>AgapAI - AI First Aid &amp; Emergency Triage</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&amp;family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"background":"#0b1326","tertiary":"#4fdbc8","surface-container-highest":"#2d3449","inverse-primary":"#b91a24","outline":"#ab8986","secondary":"#4cd7f6","on-secondary-fixed":"#001f26","on-secondary-container":"#00424e","primary-fixed-dim":"#ffb3ad","on-error":"#690005","outline-variant":"#5b403e","tertiary-fixed-dim":"#4fdbc8","secondary-fixed":"#acedff","primary":"#ffb3ad","on-secondary-fixed-variant":"#004e5c","surface-variant":"#2d3449","surface-container-low":"#131b2e","secondary-container":"#03b5d3","on-surface-variant":"#e4beba","on-tertiary-container":"#00302a","surface-container-high":"#222a3d","surface-container-lowest":"#060e20","surface-bright":"#31394d","error-container":"#93000a","on-error-container":"#ffdad6","error":"#ffb4ab","tertiary-fixed":"#71f8e4","primary-fixed":"#ffdad7","on-background":"#dae2fd","on-primary-container":"#5c0008","on-secondary":"#003640","on-tertiary-fixed":"#00201c","secondary-fixed-dim":"#4cd7f6","inverse-on-surface":"#283044","primary-container":"#ff5451","surface-dim":"#0b1326","surface":"#0b1326","on-surface":"#dae2fd","on-primary":"#68000a","tertiary-container":"#00a392","on-primary-fixed-variant":"#930013","surface-tint":"#ffb3ad","on-primary-fixed":"#410004","on-tertiary-fixed-variant":"#005048","surface-container":"#171f33","on-tertiary":"#003731","inverse-surface":"#dae2fd"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","space-xl":"2.5rem","gutter":"1.5rem","margin":"2rem","gutter-mobile":"1rem","space-xs":"0.25rem","space-md":"1rem","margin-mobile":"1rem","space-sm":"0.5rem","space-2xl":"4rem"},fontFamily:{"display-hero":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"display-hero-mobile":["Plus Jakarta Sans"],"label-code":["JetBrains Mono"],"headline-md":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-emergency":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"]},fontSize:{"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"600"}],"display-hero-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"800"}],"label-code":["12px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"500"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"label-emergency":["13px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"800"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="h-20 w-full max-w-[1280px] mx-auto px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="AgapAI Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBCltu_RzzM1JAsj6vqXXlo5v_pxL5IjGm0wpp3AZ9vpBmJrpsbePyHAP5QdjS8M18g2S7UB6Azv0VP7-EA_2UDH4zaNCSi2bQnmaLUYU0uWLX5j4euXh_WcFRhg-23uX1PAvTtN5TMS01b7shOdcaXZox7W-sMPr67XocxMHvE82ghfGRoAUEtl6ucDuudHRcu-5HvLzyuNOFiJiDwplThbWNvwYAkvTfOnqioXiY"/><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md text-on-surface tracking-tight">AgapAI</span><span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-tertiary font-label-code text-label-code uppercase tracking-wider">AI First-Aid</span></div></div><nav class="hidden lg:flex items-center gap-space-md" data-active-classes="text-on-surface font-semibold bg-surface-container-high px-space-sm py-1.5 rounded-lg"><a aria-current="page" class="transition-colors text-on-surface font-semibold bg-surface-container-high px-space-sm py-1.5 rounded-lg" data-path="home" href="#home">Home</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1.5 px-space-xs font-body-sm text-body-sm" data-path="about-us" href="#about">About Us</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1.5 px-space-xs font-body-sm text-body-sm" data-path="features-services" href="#features">Features &amp; Services</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1.5 px-space-xs font-body-sm text-body-sm" data-path="interactive-demo" href="#demo">Interactive Demo</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1.5 px-space-xs font-body-sm text-body-sm" data-path="impact" href="#impact">Impact</a></nav><div class="flex items-center gap-space-md"><a class="relative inline-flex items-center justify-center px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary-container font-label-emergency text-label-emergency uppercase shadow-[0_0_24px_rgba(255,84,81,0.45)] hover:bg-error hover:text-on-error transition-all focus:outline-none focus:ring-2 focus:ring-primary" href="#join-beta">Join Beta</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section class="relative w-full overflow-hidden pb-space-2xl" id="home">
+<!-- Ambient Tech Glows -->
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[360px] bg-gradient-to-b from-primary-container/20 via-secondary/15 to-transparent blur-3xl pointer-events-none -z-10 rounded-full"></div>
+<div class="absolute top-1/3 -right-24 w-96 h-96 bg-tertiary/10 blur-3xl pointer-events-none -z-10 rounded-full"></div>
+<div class="max-w-[1280px] mx-auto px-gutter pt-space-xl">
+<!-- Urgency Subtitle Badge -->
+<div class="flex justify-center mb-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-high/90 shadow-md backdrop-blur-md">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-primary-container animate-ping"></span>
+<span class="inline-block w-2 h-2 -ml-3.5 rounded-full bg-primary-container"></span>
+<span class="font-label-code text-label-code text-on-surface uppercase tracking-wider">
+            ⚡ Edge-AI Multimodal Triage • 100% Offline Capable • Built for PH Disaster Preparedness
+          </span>
+</div>
+</div>
+<!-- Headline & Subtitle -->
+<div class="text-center max-w-4xl mx-auto space-y-space-md">
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight">
+          Instant, Guided First Aid <br class="hidden sm:block"/>
+<span class="bg-gradient-to-r from-primary-container via-primary to-secondary bg-clip-text text-transparent">
+            When Seconds Matter Most.
+          </span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+          An AI-powered emergency companion delivering offline, camera-guided first aid instructions and localized voice guidance in Tagalog, Cebuano, and English.
+        </p>
+<!-- CTA Buttons -->
+<div class="flex flex-wrap items-center justify-center gap-space-md pt-space-sm">
+<a class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-xl bg-primary-container text-on-primary-container font-label-emergency text-label-emergency uppercase shadow-[0_0_28px_rgba(255,84,81,0.45)] hover:scale-105 active:scale-95 transition-all" href="#demo">
+<span class="material-symbols-outlined text-lg">vital_signs</span>
+            Experience AgapAI
+          </a>
+<a class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-xl bg-surface-container-high/80 hover:bg-surface-container-highest text-on-surface font-headline-sm text-headline-sm transition-all shadow-md backdrop-blur-md" href="#about">
+<span class="material-symbols-outlined text-secondary text-xl">play_circle</span>
+            Watch Demo Video
+          </a>
+</div>
+</div>
+<!-- Mockup & Telemetry Cards Bento Layout -->
+<div class="relative mt-space-2xl max-w-5xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-space-lg">
+<!-- Left Side Floating Card -->
+<div class="w-full lg:w-72 order-2 lg:order-1 flex flex-col gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-low/95 shadow-xl backdrop-blur-lg transform hover:-translate-y-1 transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-code text-label-code uppercase tracking-wider text-secondary">Sensor Diagnostic</span>
+<span class="inline-flex items-center gap-1 font-label-code text-label-code text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span> 18ms
+              </span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface mb-1">Edge Triage Active</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm mb-space-sm">
+<span class="material-symbols-outlined text-tertiary text-base">verified</span>
+<span>Vision Model v2.4 (Offline)</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 98.4%"></div>
+</div>
+<div class="flex justify-between items-center mt-1 font-label-code text-label-code text-tertiary">
+<span>Confidence Score</span>
+<span>98.4%</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low/95 shadow-xl backdrop-blur-lg transform hover:-translate-y-1 transition-all">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="material-symbols-outlined text-primary text-base">emergency</span>
+<span class="font-label-code text-label-code uppercase tracking-wider text-primary">PH Hotline Link</span>
+</div>
+<div class="flex items-baseline justify-between">
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">911 Ready</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">LGU Geolocation Stored</p>
+</div>
+<span class="px-space-xs py-1 rounded bg-error-container text-on-error-container font-label-code text-label-code font-bold">EMERGENCY</span>
+</div>
+</div>
+</div>
+<!-- Central Mockup Image -->
+<div class="relative order-1 lg:order-2 flex-shrink-0 group">
+<div class="absolute -inset-4 bg-gradient-to-r from-primary-container/20 to-secondary/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all opacity-70"></div>
+<div class="relative rounded-3xl overflow-hidden shadow-2xl p-2 bg-surface-container-high/60 backdrop-blur-md">
+<img alt="AgapAI Mobile App Scanner Interface analyzing a sprained wrist in an emergency ambulance setting" class="w-full max-w-[340px] sm:max-w-[400px] h-auto object-cover rounded-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTZok2PXxOId_KJdEf1iY9sdx23iz2gSrkNPS1yGi6esKzIF8oF0NZrr2ptsBu9EoK6Mq2rVOVAwYSIb0um5mzLA9mDRImRdO8Iz0eoFjcJV6QHrGoYah3HaEU7pWu9tnGFSpS40LF_e6ZMFR1GcUzT1CxMXoqLsfMHm9FVjU1cAkB7Uy_3_1PNVfm8foMDyoPLAz1xwjsAQp2ba2ZoFqHlZyFcEMb8etmTv-0pg"/>
+</div>
+</div>
+<!-- Right Side Floating Card -->
+<div class="w-full lg:w-72 order-3 flex flex-col gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-low/95 shadow-xl backdrop-blur-lg transform hover:-translate-y-1 transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-code text-label-code uppercase tracking-wider text-secondary">Audio Instruction</span>
+<span class="material-symbols-outlined text-secondary animate-pulse text-sm">graphic_eq</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface mb-2">Tagalog Guidance</div>
+<!-- Audio Waveform Mock -->
+<div class="flex items-center gap-1 h-8 my-space-xs">
+<span class="w-1 bg-secondary rounded-full h-3 animate-pulse"></span>
+<span class="w-1 bg-secondary rounded-full h-6 animate-pulse" style="animation-delay: 150ms"></span>
+<span class="w-1 bg-secondary rounded-full h-8 animate-pulse" style="animation-delay: 300ms"></span>
+<span class="w-1 bg-secondary rounded-full h-4 animate-pulse" style="animation-delay: 75ms"></span>
+<span class="w-1 bg-secondary rounded-full h-7 animate-pulse" style="animation-delay: 220ms"></span>
+<span class="w-1 bg-secondary rounded-full h-5 animate-pulse" style="animation-delay: 100ms"></span>
+<span class="w-1 bg-secondary rounded-full h-2 animate-pulse"></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic bg-surface-container p-space-xs rounded-lg mt-space-xs">
+              “Huwag galawin ang manikid. Maglapat ng malamig na bimpo.”
+            </p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low/95 shadow-xl backdrop-blur-lg">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-tertiary text-base">signal_cellular_off</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Zero Data Needed</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Full ONNX runtime embeds directly inside smartphone cache memory.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ABOUT US SECTION -->
+<section class="w-full py-space-2xl bg-surface-container-lowest" id="about">
+<div class="max-w-[1280px] mx-auto px-gutter space-y-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left: Context / Urgent Reality -->
+<div class="lg:col-span-6 space-y-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container text-primary font-label-code text-label-code uppercase tracking-wider">
+            Crisis Geography &amp; Medical Reality
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+            A 7,641-Island Nation Prone to Disasters, Built with Critical Response Delays.
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            From remote typhoon-battered barangays in Samar to congested metro arteries in NCR, formal ambulance response regularly takes <span class="text-primary font-semibold">45 minutes or more</span>. In cardiac arrests, arterial bleeding, and traumatic fractures, brain death or irreversible shock occurs in less than 7 minutes.
+          </p>
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-lg flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-error-container text-on-error-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-xl">warning</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">The 70% First Aid Knowledge Gap</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Over 70% of Filipino households lack certified basic first aid knowledge or sterile medical kits. AgapAI bridges this void directly with automated camera intelligence.</p>
+</div>
+</div>
+</div>
+<!-- Right: Purpose, Mission & Vision Bento -->
+<div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="p-space-lg rounded-2xl bg-surface-container shadow-md flex flex-col justify-between">
+<div class="space-y-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">track_changes</span>
+</div>
+<span class="font-label-code text-label-code text-secondary uppercase tracking-wider block">Our Core Mission</span>
+<p class="font-body-md text-body-md text-on-surface">To empower every Filipino household and responder with instant, accessible, and intelligent life-saving guidance, overcoming language and connectivity barriers.</p>
+</div>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container shadow-md flex flex-col justify-between">
+<div class="space-y-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">visibility</span>
+</div>
+<span class="font-label-code text-label-code text-tertiary uppercase tracking-wider block">Our Vision</span>
+<p class="font-body-md text-body-md text-on-surface">A nation where no life is lost to preventable emergency delays through decentralized, localized, offline AI assistance.</p>
+</div>
+</div>
+<div class="sm:col-span-2 p-space-lg rounded-2xl bg-gradient-to-r from-surface-container to-surface-container-high shadow-lg">
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="space-y-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">Philippine Red Cross Standard Aligned</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Trained on DOH protocols, BLS curriculum, and localized disaster manuals.</p>
+</div>
+<div class="flex items-center gap-space-xs text-tertiary font-label-code text-label-code">
+<span class="material-symbols-outlined">verified_user</span>
+                Verified Engine
+              </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-space-md pt-space-md">
+<div class="p-space-lg rounded-2xl bg-surface-container text-center space-y-space-xs shadow-md">
+<span class="font-display-hero text-display-hero text-secondary font-black block">&lt; 50ms</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Inference Speed</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Runs smoothly on sub-$100 Android handsets.</p>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container text-center space-y-space-xs shadow-md">
+<span class="font-display-hero text-display-hero text-tertiary font-black block">3 Native</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Languages Supported</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tagalog, Bisaya (Cebuano), and English voices.</p>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container text-center space-y-space-xs shadow-md">
+<span class="font-display-hero text-display-hero text-primary font-black block">0 KB</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Cloud Bandwidth</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Zero signal dependency during typhoons and floods.</p>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container text-center space-y-space-xs shadow-md">
+<span class="font-display-hero text-display-hero text-on-surface font-black block">100+</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Crisis Protocols</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">From venomous bites to pediatric CPR cadence.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- FEATURES SECTION -->
+<section class="w-full py-space-2xl bg-background" id="features">
+<div class="max-w-[1280px] mx-auto px-gutter space-y-space-xl">
+<div class="text-center max-w-3xl mx-auto space-y-space-xs">
+<span class="font-label-code text-label-code uppercase tracking-wider text-secondary">Intelligent Medical Telemetry</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Engineered for Island Realities &amp; Disasters</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">No doctor in sight? AgapAI acts as an acute, clinically safe multimodal pair-of-eyes with localized real-world improvisation.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Feature 1: Real-Time Camera Guidance -->
+<div class="group relative p-space-xl rounded-2xl bg-surface-container-low shadow-xl overflow-hidden transition-all hover:bg-surface-container">
+<div class="absolute top-0 right-0 w-44 h-44 bg-secondary/10 rounded-full blur-3xl group-hover:scale-125 transition-transform"></div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high text-secondary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-2xl">center_focus_strong</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">Real-Time Camera Guidance &amp; Triage</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md leading-relaxed">
+            Computer vision edge neural networks scan injuries continuously. It detects arterial bleed spurts, burn degrees, compound fracture angles, and sprains, rendering augmented color-coded overlays directly over the screen.
+          </p>
+<div class="flex items-center gap-space-xs font-label-code text-label-code text-secondary">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+            Bounding box anatomical precision
+          </div>
+</div>
+<!-- Feature 2: Improvised Tool Detection -->
+<div class="group relative p-space-xl rounded-2xl bg-surface-container-low shadow-xl overflow-hidden transition-all hover:bg-surface-container">
+<div class="absolute top-0 right-0 w-44 h-44 bg-primary-container/10 rounded-full blur-3xl group-hover:scale-125 transition-transform"></div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high text-primary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-2xl">auto_fix_high</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">Improvised Tool Detection (Pinoy Ingenuity AI)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md leading-relaxed">
+            Filipino homes rarely have commercial traction splints. Point your phone at surrounding objects: AgapAI identifies everyday substitutes like clean malongs, bamboo strips, sturdy cardboard, towels, belts, and umbrellas.
+          </p>
+<div class="flex items-center gap-space-xs font-label-code text-label-code text-primary">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+            Household object feasibility scoring
+          </div>
+</div>
+<!-- Feature 3: Trilingual Voice Guidance -->
+<div class="group relative p-space-xl rounded-2xl bg-surface-container-low shadow-xl overflow-hidden transition-all hover:bg-surface-container">
+<div class="absolute top-0 right-0 w-44 h-44 bg-tertiary/10 rounded-full blur-3xl group-hover:scale-125 transition-transform"></div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high text-tertiary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-2xl">record_voice_over</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">Trilingual Voice Guidance (Hands-Free)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-sm leading-relaxed">
+            In emergencies, your hands must be holding pressure or supporting the spine. Calming voice prompts guide responders step-by-step with acoustic pause detection.
+          </p>
+<!-- Interactive Language Tab Preview -->
+<div class="mt-space-sm p-space-sm rounded-xl bg-surface-container-lowest">
+<div class="flex gap-1 mb-space-xs" id="langTabs">
+<button class="px-2.5 py-1 text-xs rounded font-label-code bg-tertiary text-on-tertiary font-bold transition-all" id="tab-tl" onclick="switchVoice('tl')">Tagalog</button>
+<button class="px-2.5 py-1 text-xs rounded font-label-code bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" id="tab-ceb" onclick="switchVoice('ceb')">Cebuano</button>
+<button class="px-2.5 py-1 text-xs rounded font-label-code bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" id="tab-en" onclick="switchVoice('en')">English</button>
+</div>
+<div class="text-sm font-label-code text-tertiary italic p-1" id="voicePhrase">
+              “Itali nang maingat ang bimpo. Huwag masyadong higpitan.”
+            </div>
+</div>
+</div>
+<!-- Feature 4: 100% Offline Edge Architecture -->
+<div class="group relative p-space-xl rounded-2xl bg-surface-container-low shadow-xl overflow-hidden transition-all hover:bg-surface-container">
+<div class="absolute top-0 right-0 w-44 h-44 bg-secondary-fixed/10 rounded-full blur-3xl group-hover:scale-125 transition-transform"></div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high text-secondary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-2xl">wifi_off</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">100% Offline Edge Architecture</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md leading-relaxed">
+            When Category 5 typhoons topple cellular towers and blackout power grids, AgapAI operates without interruption. All visual neural weights and phonetics reside completely within phone storage.
+          </p>
+<div class="flex items-center gap-space-xs font-label-code text-label-code text-secondary">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+            Guaranteed zero API latency in disaster zones
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE DEMO PREVIEW SECTION -->
+<section class="w-full py-space-2xl bg-surface-container-lowest" id="demo">
+<div class="max-w-[1280px] mx-auto px-gutter space-y-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-code text-label-code uppercase tracking-wider text-primary">Live Simulator</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Test the AgapAI Scanner</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Switch across typical acute scenarios to view how multimodal computer vision annotates the trauma zone in real-time.
+        </p>
+</div>
+<!-- Triage Scenario Selector Buttons -->
+<div class="flex flex-wrap gap-space-xs p-1.5 rounded-xl bg-surface-container-low max-w-2xl">
+<button class="px-space-md py-2 rounded-lg font-headline-sm text-headline-sm bg-primary-container text-on-primary-container transition-all" id="scen-sprain" onclick="setScenario('sprain')">
+          Sprain &amp; Splint
+        </button>
+<button class="px-space-md py-2 rounded-lg font-headline-sm text-headline-sm text-on-surface-variant hover:text-on-surface transition-all" id="scen-bleed" onclick="setScenario('bleed')">
+          Bleeding Control
+        </button>
+<button class="px-space-md py-2 rounded-lg font-headline-sm text-headline-sm text-on-surface-variant hover:text-on-surface transition-all" id="scen-choke" onclick="setScenario('choke')">
+          Choking (Heimlich)
+        </button>
+<button class="px-space-md py-2 rounded-lg font-headline-sm text-headline-sm text-on-surface-variant hover:text-on-surface transition-all" id="scen-burn" onclick="setScenario('burn')">
+          Burns Triage
+        </button>
+</div>
+<!-- Interactive Simulator Display Viewport -->
+<div class="relative w-full rounded-3xl bg-surface-container overflow-hidden shadow-2xl p-space-md md:p-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<!-- Mock Camera Screen Canvas -->
+<div class="lg:col-span-7 relative w-full h-[400px] md:h-[460px] rounded-2xl bg-surface-container-lowest overflow-hidden flex items-center justify-center shadow-inner">
+<!-- Simulated Camera Feed Placeholder -->
+<div class="absolute inset-0 bg-cover bg-center opacity-60" data-alt="A macro POV view of an injured arm resting on a wooden table with an improvised cotton cloth bandage wrapped securely around the wrist, warm ambient lighting, clinical camera feed simulation" id="demoBg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBzbXfIYBJhLNsqLy1gcRiu3eQBKNy5FiKV9U6DTGnz4UTbTnTtvQc7Dpea_KbiP5IcZYjURrd8LuA6ouCn0yUmmXeDZX0sUfLxGql3bZkEmDejdhxib8jG_Z0hfHz1Cvwf3S2pWOubxOqKOpU3XlzjKABesVgZEdfYvJBTJ_NdKGtaBHDeULscqveun3feO2h1pedRo6ly5ZgkKAj7jMTWW9hMague1ScQTOfnDw')"></div>
+<!-- Dynamic Bounding Boxes Overlay -->
+<div class="absolute top-1/4 left-1/4 w-40 h-28 border-2 border-primary-container rounded-lg shadow-[0_0_15px_rgba(255,84,81,0.5)] flex flex-col justify-between p-1.5 pointer-events-none transition-all duration-300" id="demoBounding1">
+<span class="font-label-code text-label-code bg-primary-container text-on-primary-container px-1 rounded w-fit" id="demoLabel1">SPRAIN DETECTED</span>
+<span class="font-label-code text-[10px] text-primary self-end">Conf: 94.2%</span>
+</div>
+<div class="absolute bottom-1/4 right-1/4 w-44 h-24 border-2 border-tertiary rounded-lg shadow-[0_0_15px_rgba(79,219,200,0.5)] flex flex-col justify-between p-1.5 pointer-events-none transition-all duration-300" id="demoBounding2">
+<span class="font-label-code text-label-code bg-tertiary text-on-tertiary px-1 rounded w-fit" id="demoLabel2">COTTON BIMPO (CLEAN)</span>
+<span class="font-label-code text-[10px] text-tertiary self-end">Tool Match: 98%</span>
+</div>
+<!-- Top Camera Hud -->
+<div class="absolute top-3 left-4 right-4 flex items-center justify-between text-on-surface font-label-code text-label-code">
+<div class="flex items-center gap-1.5 bg-surface-container-highest/80 px-2.5 py-1 rounded-full backdrop-blur-sm">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span>REC • LIVE OVERLAY</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-highest/80 px-2.5 py-1 rounded-full backdrop-blur-sm">
+<span class="material-symbols-outlined text-xs text-tertiary">memory</span>
+<span>NPU: 38 FPS</span>
+</div>
+</div>
+<!-- Bottom Audio Guidance Bar -->
+<div class="absolute bottom-4 left-4 right-4 bg-surface-container-highest/90 p-space-sm rounded-xl backdrop-blur-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<button class="w-9 h-9 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-md hover:scale-105 transition-all" id="audioBtn" onclick="toggleAudioPreview()">
+<span class="material-symbols-outlined text-lg" id="audioIcon">volume_up</span>
+</button>
+<div>
+<span class="font-label-code text-[11px] text-secondary uppercase block">Tagalog Audio Cadence</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold" id="demoAudioText">“Lapatan ng banayad na bendahe. Panatilihing nakapirmi.”</span>
+</div>
+</div>
+<span class="hidden sm:inline-block font-label-code text-label-code text-tertiary">44.1 kHz</span>
+</div>
+</div>
+<!-- Scenario Instructions & Diagnostics Info -->
+<div class="lg:col-span-5 space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-sm py-1 rounded-full bg-primary-container text-on-primary-container font-label-code text-label-code font-bold" id="demoStepBadge">
+                Step 2 of 4
+              </span>
+<span class="font-label-code text-label-code text-on-surface-variant">Triage Severity: Level 2</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface" id="demoTitle">
+              Immobilize Sprained Wrist with Clean Bimpo
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed" id="demoDesc">
+              Wrap the improvised towel smoothly around the carpal bone joint. Support the wrist with a rolled cardboard or folded magazine underneath to prevent ligament tearing while waiting for transport.
+            </p>
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-high">
+<span class="material-symbols-outlined text-tertiary">check</span>
+<span class="font-body-sm text-body-sm text-on-surface" id="demoCheck1">Direct pressure not advised for joint dislocation.</span>
+</div>
+<div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-high">
+<span class="material-symbols-outlined text-tertiary">check</span>
+<span class="font-body-sm text-body-sm text-on-surface" id="demoCheck2">Apply cold compress wrapped in cloth for 15 mins.</span>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<button class="inline-flex items-center gap-2 px-space-md py-2.5 rounded-xl bg-secondary text-on-secondary font-headline-sm text-headline-sm hover:scale-105 transition-all shadow-lg" onclick="cycleStep()">
+                Next Instruction
+                <span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+<span class="font-label-code text-label-code text-on-surface-variant">Auto-advances on visual confirmation</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA & COMMUNITY BETA SIGNUP -->
+<section class="w-full py-space-2xl bg-background relative overflow-hidden" id="beta">
+<div class="max-w-[1280px] mx-auto px-gutter">
+<div class="relative rounded-3xl bg-surface-container-low shadow-2xl p-space-xl md:p-space-2xl overflow-hidden">
+<!-- Background accents -->
+<div class="absolute -right-20 -top-20 w-80 h-80 bg-primary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -left-20 -bottom-20 w-80 h-80 bg-secondary/15 rounded-full blur-3xl pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative z-10">
+<div class="lg:col-span-7 space-y-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-highest text-secondary font-label-code text-label-code uppercase tracking-wider">
+              Nationwide Early Access Pilot
+            </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+              Be Part of the Future of Emergency Response.
+            </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+              Sign up for early beta access or partner with us to bring AgapAI to communities, LGUs, and campus emergency rescue teams across Luzon, Visayas, and Mindanao.
+            </p>
+<!-- Quick dial Hotlines Grid -->
+<div class="pt-space-md">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant block mb-space-sm">Philippine Hotlines Integrated</span>
+<div class="grid grid-cols-3 gap-space-sm">
+<a class="p-space-sm rounded-xl bg-surface-container flex flex-col items-center justify-center text-center hover:bg-surface-container-high transition-colors" href="tel:911">
+<span class="text-xl mb-1">🚨</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">911</span>
+<span class="font-label-code text-[10px] text-on-surface-variant">National SOS</span>
+</a>
+<a class="p-space-sm rounded-xl bg-surface-container flex flex-col items-center justify-center text-center hover:bg-surface-container-high transition-colors" href="tel:143">
+<span class="text-xl mb-1">🚑</span>
+<span class="font-headline-md text-headline-md text-secondary font-bold">143</span>
+<span class="font-label-code text-[10px] text-on-surface-variant">Red Cross</span>
+</a>
+<a class="p-space-sm rounded-xl bg-surface-container flex flex-col items-center justify-center text-center hover:bg-surface-container-high transition-colors" href="tel:1555">
+<span class="text-xl mb-1">🏥</span>
+<span class="font-headline-md text-headline-md text-tertiary font-bold">1555</span>
+<span class="font-label-code text-[10px] text-on-surface-variant">DOH Medical</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Signup Form Card -->
+<div class="lg:col-span-5 p-space-lg rounded-2xl bg-surface-container shadow-xl">
+<form class="space-y-space-md" onsubmit="handleSignup(event)">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Join the AgapAI Closed Beta</h3>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1">Full Name</label>
+<input class="w-full px-space-md py-2.5 rounded-xl bg-surface-container-highest text-on-surface font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-2 focus:ring-secondary" placeholder="e.g. Maria Clara Santos" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1">Email Address</label>
+<input class="w-full px-space-md py-2.5 rounded-xl bg-surface-container-highest text-on-surface font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-2 focus:ring-secondary" placeholder="name@domain.ph" required="" type="email"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1">Your Role / Organization</label>
+<select class="w-full px-space-md py-2.5 rounded-xl bg-surface-container-highest text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-secondary">
+<option value="citizen">Citizen / Household Responder</option>
+<option value="lgu">LGU / Disaster Responder (MDRRMO / BDRRMC)</option>
+<option value="medical">Medical Professional / Nurse / EMT</option>
+<option value="student">Student / Campus Emergency Team</option>
+</select>
+</div>
+<button class="w-full py-space-sm px-space-md rounded-xl bg-primary-container text-on-primary-container font-label-emergency text-label-emergency uppercase shadow-[0_0_24px_rgba(255,84,81,0.4)] hover:bg-error hover:text-on-error transition-all" type="submit">
+                Get Early Access
+              </button>
+<div class="hidden text-center font-label-code text-label-code text-tertiary pt-2" id="signupFeedback">
+                ✓ Salamat! Your early invite reservation is queued.
+              </div>
+<p class="font-label-code text-[11px] text-on-surface-variant text-center">
+                Strict privacy: Health telemetry is evaluated on-device only.
+              </p>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Trilingual Voice Guidance Switcher
+  const voicePhrases = {
+    tl: "“Itali nang maingat ang bimpo. Huwag masyadong higpitan.”",
+    ceb: "“Ihigut ug tarung ang panapton. Ayaw kaayo huguti.”",
+    en: "“Secure the bandage gently. Do not over-tighten the wrap.”"
+  };
+
+  function switchVoice(lang) {
+    document.getElementById('voicePhrase').innerText = voicePhrases[lang];
+    ['tl', 'ceb', 'en'].forEach(l => {
+      const btn = document.getElementById('tab-' + l);
+      if (l === lang) {
+        btn.className = "px-2.5 py-1 text-xs rounded font-label-code bg-tertiary text-on-tertiary font-bold transition-all";
+      } else {
+        btn.className = "px-2.5 py-1 text-xs rounded font-label-code bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all";
+      }
+    });
+  }
+
+  // Interactive Demo Simulator Data & Switcher
+  const scenarios = {
+    sprain: {
+      btn: 'scen-sprain',
+      title: "Immobilize Sprained Wrist with Clean Bimpo",
+      step: "Step 2 of 4",
+      desc: "Wrap the improvised towel smoothly around the carpal bone joint. Support the wrist with a rolled cardboard or folded magazine underneath to prevent ligament tearing while waiting for transport.",
+      box1: "SPRAIN DETECTED",
+      box2: "COTTON BIMPO (CLEAN)",
+      audio: "“Lapatan ng banayad na bendahe. Panatilihing nakapirmi.”",
+      check1: "Direct pressure not advised for joint dislocation.",
+      check2: "Apply cold compress wrapped in cloth for 15 mins."
+    },
+    bleed: {
+      btn: 'scen-bleed',
+      title: "Arterial Bleed Hemostasis via Clean Cloth & Direct Pressure",
+      step: "Step 1 of 3",
+      desc: "Position the thick folded cloth directly over the puncture point. Apply firm, continuous two-handed downward pressure. Do not lift the cloth to check bleeding.",
+      box1: "PULSATILE BLEED (DEEP)",
+      box2: "COTTON SHIRT / COMPRESS",
+      audio: "“Diinan nang madiin gamit ang dalawang kamay. Huwag alisin ang tela.”",
+      check1: "Elevate wound above heart level if no fracture suspected.",
+      check2: "Do not apply tourniquet unless bleeding cannot be controlled."
+    },
+    choke: {
+      btn: 'scen-choke',
+      title: "Adult Conscious Choking - Abdominal Thrusts (Heimlich)",
+      step: "Step 2 of 3",
+      desc: "Stand firmly behind the victim. Form a fist just above the navel. Grasp your fist with your other hand and deliver quick, upward and inward thrusts until foreign object expels.",
+      box1: "AIRWAY OBSTRUCTION",
+      box2: "TARGET: NAVEL +2 INCHES",
+      audio: "“Pumuwesto sa likod. Itulak papasok at paitaas nang mabilis.”",
+      check1: "Verify victim cannot speak or cough forcefully.",
+      check2: "Transition immediately to CPR if victim becomes unresponsive."
+    },
+    burn: {
+      btn: 'scen-burn',
+      title: "2nd-Degree Thermal Burn: Clean Cool Water Rinse",
+      step: "Step 1 of 4",
+      desc: "Irrigate the affected dermal area with clean, room-temperature running water for 10-20 minutes. Avoid applying ice, toothpaste, or oil which traps heat.",
+      box1: "PARTIAL THICKNESS BURN",
+      box2: "RUNNING WATER DETECTED",
+      audio: "“Buhusan ng malinis at malamig na tubig. Huwag lagyan ng toothpaste.”",
+      check1: "Do not burst or peel blisters.",
+      check2: "Cover loosely with clean non-adherent sterile plastic wrap."
+    }
+  };
+
+  let currentScenarioKey = 'sprain';
+
+  function setScenario(key) {
+    currentScenarioKey = key;
+    const data = scenarios[key];
+    ['sprain', 'bleed', 'choke', 'burn'].forEach(k => {
+      const btn = document.getElementById(scenarios[k].btn);
+      if (k === key) {
+        btn.className = "px-space-md py-2 rounded-lg font-headline-sm text-headline-sm bg-primary-container text-on-primary-container transition-all";
+      } else {
+        btn.className = "px-space-md py-2 rounded-lg font-headline-sm text-headline-sm text-on-surface-variant hover:text-on-surface transition-all";
+      }
+    });
+
+    document.getElementById('demoTitle').innerText = data.title;
+    document.getElementById('demoStepBadge').innerText = data.step;
+    document.getElementById('demoDesc').innerText = data.desc;
+    document.getElementById('demoLabel1').innerText = data.box1;
+    document.getElementById('demoLabel2').innerText = data.box2;
+    document.getElementById('demoAudioText').innerText = data.audio;
+    document.getElementById('demoCheck1').innerText = data.check1;
+    document.getElementById('demoCheck2').innerText = data.check2;
+  }
+
+  let stepIndex = 2;
+  function cycleStep() {
+    stepIndex = (stepIndex % 4) + 1;
+    document.getElementById('demoStepBadge').innerText = "Step " + stepIndex + " of 4";
+    const box = document.getElementById('demoBounding1');
+    box.classList.toggle('scale-105');
+    setTimeout(() => box.classList.remove('scale-105'), 300);
+  }
+
+  let isPlayingAudio = false;
+  function toggleAudioPreview() {
+    isPlayingAudio = !isPlayingAudio;
+    const icon = document.getElementById('audioIcon');
+    if (isPlayingAudio) {
+      icon.innerText = "pause";
+      document.getElementById('audioBtn').classList.add('bg-tertiary', 'text-on-tertiary');
+    } else {
+      icon.innerText = "volume_up";
+      document.getElementById('audioBtn').classList.remove('bg-tertiary', 'text-on-tertiary');
+    }
+  }
+
+  function handleSignup(e) {
+    e.preventDefault();
+    document.getElementById('signupFeedback').classList.remove('hidden');
+    e.target.reset();
+  }
+</script></main><footer class="w-full bg-surface-container-lowest py-space-2xl text-on-surface-variant"><div class="max-w-[1280px] mx-auto px-gutter"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl pb-space-xl"><div class="space-y-space-sm"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface">AgapAI</span><span class="px-space-xs py-0.5 rounded-full bg-surface-container text-secondary font-label-code text-label-code">PH Pilot</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Rapid, clinically verified AI emergency triage and first-aid response designed for archipelago connectivity constraints and localized barangay support.</p><div class="pt-space-xs"><p class="font-label-code text-label-code text-tertiary">DNSC Institute of Computing</p><p class="font-body-sm text-body-sm">Davao del Norte State College</p></div></div><div class="space-y-space-sm"><span class="font-label-md text-label-md uppercase text-on-surface block tracking-wider">Philippine Emergency Hotlines</span><div class="space-y-space-xs"><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low"><span class="font-body-sm text-body-sm">National Emergency</span><span class="font-headline-sm text-headline-sm text-primary font-bold">911</span></div><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low"><span class="font-body-sm text-body-sm">Philippine Red Cross</span><span class="font-headline-sm text-headline-sm text-secondary font-bold">143</span></div><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low"><span class="font-body-sm text-body-sm">DOH COVID &amp; Health</span><span class="font-headline-sm text-headline-sm text-tertiary font-bold">1555</span></div></div></div><div class="space-y-space-sm"><span class="font-label-md text-label-md uppercase text-on-surface block tracking-wider">Navigation</span><ul class="space-y-space-xs font-body-sm text-body-sm"><li><a class="hover:text-on-surface transition-colors" href="#home">Home Overview</a></li><li><a class="hover:text-on-surface transition-colors" href="#features">Offline Triage Mesh</a></li><li><a class="hover:text-on-surface transition-colors" href="#demo">AI Diagnostic Protocol</a></li><li><a class="hover:text-on-surface transition-colors" href="#impact">LGU &amp; Barangay Adoption</a></li></ul></div><div class="space-y-space-sm"><span class="font-label-md text-label-md uppercase text-on-surface block tracking-wider">Initiative &amp; Connectivity</span><p class="font-body-sm text-body-sm">An academic and applied health research initiative optimizing frontline emergency survival through resilient AI guidance.</p><div class="flex items-center gap-space-sm pt-space-xs"><span class="material-symbols-outlined text-secondary">rss_feed</span><span class="material-symbols-outlined text-tertiary">health_and_safety</span><span class="material-symbols-outlined text-primary">emergency_home</span></div></div></div><div class="pt-space-lg space-y-space-md"><div class="p-space-md rounded-lg bg-surface-container-low"><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"><strong class="text-error font-semibold">Medical Disclaimer:</strong> AgapAI is an emergency first-aid assistance tool and does not replace professional medical personnel, clinical diagnosis, or emergency dispatch services. In critical emergencies, contact 911 or your local barangay emergency station immediately.</p></div><div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm"><span>© 2025 AgapAI. Research &amp; Innovation Initiative of DNSC Institute of Computing. All rights reserved.</span><div class="flex items-center gap-space-md"><a class="hover:text-on-surface transition-colors" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" href="#">Data Governance</a><a class="hover:text-on-surface transition-colors" href="#">Research Ethics</a></div></div></div></div></footer></body></html>
